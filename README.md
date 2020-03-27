@@ -36,7 +36,7 @@ Les administrateurs peuvent visualiser :
 
 ## 2. Diagramme de classe :
 
-![Diagramme de classe](https://github.com/AbdelhamidLarachi/rapid_sms/blob/master/clasDiagramJavaPNG.png?raw=true)
+![Diagramme de classe](https://github.com/AbdelhamidLarachi/administration-space-full-material-table-and-statistics-/blob/master/classDiagramAdminPNG.png?raw=true)
 
 ## 3. Choix des Technologies :
 
