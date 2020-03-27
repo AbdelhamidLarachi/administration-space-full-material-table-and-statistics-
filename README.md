@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 1. Analyse des besoins  : 
 
-In the project directory, you can run:
+Pour bien gérer notre application mobile, nous avons mis un portail local pour les administrateurs accessible via le nom d’admin et son mot de passe, une fois connecté, les administrateurs peuvent trier, modifier, ajouter, supprimer les appels d’offres et les avis de consultation, ainsi que la visualisation des statistiques. Une liste des différentes fonctions a donc été établie. Voici une liste de ces fonctionnalités:
 
-### `yarn start`
+###### •	Gestion d’appels d’offres et avis de consultation :
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-	Modification 
+-	Suppression
+-	Suppression par sélection 
+-	Tri par Type, Wilaya, Date, infructuosité.
+-	Recherche sur table
+-	Voir infructuosité
+-	Voir Détails
+-	pagination
+-	Sélection de nombre d’offres par page
+-	Exporter en format csv
+-	Confirmation en cas de Surpression / Modification / Déconnexion
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+###### •	Statistiques : 
+Les administrateurs peuvent visualiser : 
+-	Total des utilisateurs
+-	Nombre et pourcentage des utilisateurs qui ont remplis le formulaire de sondage
+-	Nombres des vouchers utilisés
+-	Nombres d’appels d’offres
+-	Nombre et pourcentage des offres infructueux 
+-	Nombres des avis de consultation
 
-### `yarn test`
+###### •	résultats de sondage :
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-	Note moyenne de qualité de service 
+-	Note moyenne d’avis sur le prix de voucher
+-	Liste des suggestions des clients avec leurs date
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## 2. Diagramme de classe :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Diagramme de classe](https://github.com/AbdelhamidLarachi/rapid_sms/blob/master/clasDiagramJavaPNG.png?raw=true)
 
-### `yarn eject`
+## 3. Choix des Technologies :
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  ###### - ReactJS :
+React est une bibliothèque JavaScript pour créer des interfaces utilisateur. Il est maintenu par Facebook et une communauté de développeurs et d'entreprises individuels. React peut être utilisé comme base dans le développement d'applications, il a été utilisé comme frontend de l’application d’administration.  
+ 
+ ## 3. Choix des Modules :
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ ###### •	Material-ui : 
+est un ensemble très solide et stable des composants react qui non seulement sont beaux, mais aussi faciles à utiliser et à personnaliser. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+###### •	Axios : 
+est une bibliothèque JavaScript fonctionnant comme un client HTTP. Elle permet de communiquer avec des API en utilisant des requêtes.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+###### • React-router-dom : 
+React Router est la bibliothèque de routage standard pour React. Qui maintient votre interface utilisateur en synchronisation avec l'URL. Il dispose d'une API simple avec des fonctionnalités puissantes telles que la correspondance dynamique des routes et la gestion des transitions des vues.
 
-## Learn More
+###### •	Prop_types : 
+React fournit un mécanisme interne pour ajouter une vérification de type aux composants. Les composants React utilisent une propriété spéciale nommée propTypes pour configurer la vérification de type. Lorsque les accessoires sont passés à un composant React, ils sont vérifiés par rapport aux définitions de type configurées dans la propriété propTypes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+###### •	bcrypt : 
+bcrypt is a password hashing, based on the Blowfish cipher. Besides incorporating a salt to protect against rainbow table attacks, bcrypt is an adaptive function: over time, the iteration count can be increased to make it slower, so it remains resistant to brute-force search attacks even with increasing computation power.
+The bcrypt function is the default password hash algorithm for OpenBSD and other systems including some Linux distributions such as SUSE Linux. 
