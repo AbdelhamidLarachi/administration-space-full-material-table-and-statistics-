@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, RootComponent } from 'react'
+import SignIn from './SignIn';
+import AdminSpace from './AdminSpace';
+import Survey from './survey';
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default class App extends Component {
+  render() {
+    return (
+     
+    <Router>
+      <Switch>
+      <Route exact path="/" component={SignIn}>
+      </Route>
+      <Route component={RootComponent}>
+      <Route exact path="/adminspace" component={AdminSpace}>
+      </Route>
+    <Route exact path="/survey/:id" component={Survey}>
+      </Route>
+      </Route>
+      </Switch>
+    </Router>
+
+    )
+  }
 }
-
-export default App;
